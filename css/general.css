@@ -1,0 +1,109 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background-color: whitesmoke;
+	margin-top: 56px;
+	margin-bottom: 25px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+a {
+	color: brown;
+}
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: midnightblue;
+	color: white;
+	text-align: center;
+	height: 25px;
+}
+header {
+	background: midnightblue;
+}
+#form {
+	border: solid 5px peru;
+	color: brown;
+	padding: 10px;
+	background-color: burlywood;
+}
+#items {
+	background-color: white;
+}
+.buy {
+	background: greenyellow;
+}
+.ui-helper-hidden-accessible {
+	display: none;
+}
+.ui-autocomplete {
+	background: white;
+}
+#name-of-item:focus {
+	box-shadow: 0 0 30px blueviolet;
+}
+#amount:focus {
+	box-shadow: 0 0 30px blueviolet;
+}
+#cell:focus {
+	box-shadow: 0 0 30px blueviolet;
+}
+
+/* ------------------------------------------------------------ */
+
+/*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+	display: flex;
+	align-items: center;
+}
+.theme-switch {
+	display: inline-block;
+	height: 34px;
+	position: relative;
+	width: 60px;
+}
+
+.theme-switch input {
+	display: none;
+}
+
+.slider {
+	background-color: #ccc;
+	bottom: 0;
+	cursor: pointer;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: 0.4s;
+}
+
+.slider:before {
+	background-color: #fff;
+	bottom: 4px;
+	content: "";
+	height: 26px;
+	left: 4px;
+	position: absolute;
+	transition: 0.4s;
+	width: 26px;
+}
+
+input:checked + .slider {
+	background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+	transform: translateX(26px);
+}
+
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}

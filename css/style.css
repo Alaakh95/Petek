@@ -1,0 +1,320 @@
+:root {
+  --primary-color: #302ae6;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --heading-color: #292922;
+  --mark-color: greenyellow;
+  --hamburger-menu-color: rgb(89, 89, 89);
+}
+
+[data-theme="dark"] {
+  --primary-color: rgb(0, 255, 203);
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+  --mark-color: #302ae6;
+  --hamburger-menu-color: rgb(0, 255, 203);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  margin-top: 56px;
+  margin-bottom: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: var(--font-color);
+}
+
+h2 {
+  color: var(--heading-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  font-weight: bold;
+}
+
+a:focus {
+  border-bottom: 3px solid currentColor;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  text-align: center;
+  height: 25px;
+}
+
+input[type="text"],
+textarea {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+input[type="number"],
+textarea {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+input[type="password"],
+textarea {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+input[type="email"],
+textarea {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+input:focus {
+  background-color: var(--bg-color) !important;
+  color: var(--font-color) !important;
+}
+
+#form {
+  border: solid 5px var(--primary-color);
+  color: var(--font-color);
+  padding: 10px;
+  background-color: var(--bg-color);
+}
+
+#items {
+  background-color: var(--bg-color);
+}
+
+.buy {
+  background: var(--mark-color);
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.ui-helper-hidden-accessible {
+  display: none;
+}
+
+.ui-autocomplete {
+  background: var(--bg-color);
+}
+
+.modal-content {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+
+tr {
+  color: var(--font-color);
+}
+
+nav {
+  background-color: var(--bg-color) !important;
+}
+
+nav a {
+  color: var(--hamburger-menu-color) !important;
+}
+
+header div nav ul {
+  margin: 0 auto;
+}
+
+header div nav ul li {
+  margin: 0 auto;
+}
+
+/*CSS Slider*/
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch-wrapper em {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: #818cab;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #302ae6;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Animated icon */
+.animated-icon1 {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0px;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.animated-icon1 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.animated-icon1 span {
+  background: var(--hamburger-menu-color);
+}
+
+.animated-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+.animated-icon1 span:nth-child(2) {
+  top: 10px;
+}
+
+.animated-icon1 span:nth-child(3) {
+  top: 20px;
+}
+
+.animated-icon1.open span:nth-child(1) {
+  top: 11px;
+  transform: rotate(135deg);
+}
+
+.animated-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.animated-icon1.open span:nth-child(3) {
+  top: 11px;
+  transform: rotate(-135deg);
+}
+
+button:focus {
+  outline: none;
+}
+
+.navbar-toggler {
+  border: 0px;
+}
+
+.nav-link:hover {
+  border-bottom: 3px solid var(--primary-color);
+}
+
+/* Checkbox styling */
+.form-check-label {
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.form-check-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* When the checkbox is checked, add a blue background */
+.form-check-label input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.form-check-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.form-check-label .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+/*# sourceMappingURL=style.css.map */
